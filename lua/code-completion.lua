@@ -9,7 +9,36 @@ vim.opt.completeopt = {'menuone', 'noselect', 'noinsert', 'preview'}
 vim.opt.shortmess = vim.opt.shortmess + { c = true}
 
 local cmp = require'cmp'
-cmp.setup({ 
+
+local lsp_symbols = {
+    Text = "   (Text) ",
+    Method = "   (Method)",
+    Function = "   (Function)",
+    Constructor = "   (Constructor)",
+    Field = " ﴲ  (Field)",
+    Variable = "[] (Variable)",
+    Class = "   (Class)",
+    Interface = " ﰮ  (Interface)",
+    Module = "   (Module)",
+    Property = " 襁 (Property)",
+    Unit = "   (Unit)",
+    Value = "   (Value)",
+    Enum = " 練 (Enum)",
+    Keyword = "   (Keyword)",
+    Snippet = "   (Snippet)",
+    Color = "   (Color)",
+    File = "   (File)",
+    Reference = "   (Reference)",
+    Folder = "   (Folder)",
+    EnumMember = "   (EnumMember)",
+    Constant = " ﲀ  (Constant)",
+    Struct = " ﳤ  (Struct)",
+    Event = "   (Event)",
+    Operator = "   (Operator)",
+    TypeParameter = "   (TypeParameter)",
+}
+
+cmp.setup({
 	mapping = {
 		-- Shift+TAB to go to the Previous Suggested item
 		['<S-Tab>'] = cmp.mapping.select_prev_item(),
@@ -35,7 +64,7 @@ cmp.setup({
 	sources = {
 		{ name = 'path' },
 		{ name = 'nvim_lsp', keyword_length = 3 },
-		{ name = 'nvim_lsp_signature_help'}, 
+		{ name = 'nvim_lsp_signature_help'},
 		{ name = 'nvim_lua', keyword_length = 2},
 		{ name = 'buffer', keyword_length = 2 },
 		{ name = 'vsnip', keyword_length = 2 },
@@ -44,4 +73,23 @@ cmp.setup({
 		completion = cmp.config.window.bordered(),
 		documentation = cmp.config.window.bordered(),
 	},
+    snippet = {
+        expand = function(args)
+            vim.fn["vsnip#anonymous"](args.body)
+        end,
+    },
+
+    formatting = {
+        format = function(entry, item)
+            item.kind = lsp_symbols[item.kind]
+            item.menu = ({
+                buffer = "[Buffer]",
+                nvim_lsp = "[LSP]",
+                luasnip = "[Snippet]",
+                neorg = "[Neorg]",
+            })[entry.source.name]
+
+            return item
+        end,
+    }
 })

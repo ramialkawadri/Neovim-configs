@@ -46,4 +46,16 @@ return require('packer').startup(function(use)
 		'folke/todo-comments.nvim',
 		require = 'nvim-lua/plenary.nvim'
 	}
+	-- Autopairs
+	use {
+		'windwp/nvim-autopairs'
+	}
+	-- Bufferline
+	use {
+		'akinsho/bufferline.nvim',
+		tag = '*',
+		requires = 'nvim-tree/nvim-web-devicons'
+	}
+    -- Gitsigns
+    use 'lewis6991/gitsigns.nvim'
 end)

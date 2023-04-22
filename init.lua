@@ -1,6 +1,7 @@
 -- Install packer for plugins: git clone --depth 1 https://github.com/wbthomason/packer.nvim  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 
 require('plugins')
+require('config')
 require('mason-config')
 require('languages-setup')
 require('code-completion')
@@ -10,3 +11,6 @@ require('custom-keys')
 require('styling')
 require('syntax-highlight')
 require('statusbar')
+require('autopairs')
+require('bufferline-config')
+require('gitsigns-config')

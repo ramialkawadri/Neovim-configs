@@ -8,7 +8,7 @@ vim.opt.completeopt = {'menuone', 'noselect', 'noinsert', 'preview'}
 -- shortmess is used to avoid excessive messages
 vim.opt.shortmess = vim.opt.shortmess + { c = true}
 
-local cmp = require'cmp'
+local cmp = require('cmp')
 
 local lsp_symbols = {
     Text = "   (Text) ",

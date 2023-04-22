@@ -6,6 +6,9 @@ vim.wo.number = true
 vim.wo.relativenumber = true
 vim.wo.cursorline = true
 
+-- Vertical line
+vim.cmd('set colorcolumn=80')
+
 -- Swap files
 vim.opt.swapfile = false
 

@@ -1,7 +1,7 @@
 -- Documentation: https://github.com/neovim/nvim-lspconfig
 
-lspconfig = require 'lspconfig'
-util = require 'lspconfig/util'
+lspconfig = require('lspconfig')
+util = require('lspconfig/util')
 
 -- FIND HOW TO INSTALL JAVA
 

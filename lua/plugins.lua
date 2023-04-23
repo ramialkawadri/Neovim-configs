@@ -69,4 +69,8 @@ return require('packer').startup(function(use)
     use 'windwp/nvim-ts-autotag'
     -- Startify
     use 'mhinz/vim-startify'
+    -- Vim bbye
+    use 'moll/vim-bbye'
+    -- Vim surrond
+    use 'tpope/vim-surround'
 end)

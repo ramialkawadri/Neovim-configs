@@ -1,9 +1,6 @@
 -- Documentation: https://github.com/neovim/nvim-lspconfig
 
 lspconfig = require('lspconfig')
-util = require('lspconfig/util')
-
--- FIND HOW TO INSTALL JAVA
 
 -- C & CPP
 lspconfig.clangd.setup {}
@@ -20,7 +17,7 @@ lspconfig.emmet_ls.setup {}
 lspconfig.tsserver.setup {}
 
 -- Java
-lspconfig.jedi_language_server.setup {}
+lspconfig.jdtls.setup {}
 
 -- Json
 lspconfig.jsonls.setup {}

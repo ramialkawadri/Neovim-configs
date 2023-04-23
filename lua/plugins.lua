@@ -14,6 +14,26 @@ return require('packer').startup(function(use)
     use 'hrsh7th/cmp-path'
     use 'hrsh7th/cmp-buffer'
     use 'hrsh7th/vim-vsnip'
+    -- Gitsigns
+    use 'lewis6991/gitsigns.nvim'
+    -- Nvim color highlight
+    use 'brenoprata10/nvim-highlight-colors'
+    -- Inden blankline
+    use 'lukas-reineke/indent-blankline.nvim'
+    -- TS-rainbow
+    use 'p00f/nvim-ts-rainbow'
+    -- Autotag
+    use 'windwp/nvim-ts-autotag'
+    -- Startify
+    use 'mhinz/vim-startify'
+    -- Vim bbye
+    use 'moll/vim-bbye'
+    -- Vim surrond
+    use 'tpope/vim-surround'
+    -- Github theme
+    use 'projekt0n/github-nvim-theme'
+    -- Autopairs
+    use 'windwp/nvim-autopairs'
     -- File explorer tree
     use {
         'nvim-tree/nvim-tree.lua',
@@ -21,8 +41,6 @@ return require('packer').startup(function(use)
             'nvim-tree/nvim-web-devicons',
         },
     }
-    -- Github theme
-    use 'projekt0n/github-nvim-theme'
     -- Treesitter
     use {
         'nvim-treesitter/nvim-treesitter',
@@ -47,30 +65,15 @@ return require('packer').startup(function(use)
         'folke/todo-comments.nvim',
         require = 'nvim-lua/plenary.nvim'
     }
-    -- Autopairs
-    use {
-        'windwp/nvim-autopairs'
-    }
     -- Bufferline
     use {
         'akinsho/bufferline.nvim',
         tag = '*',
         requires = 'nvim-tree/nvim-web-devicons'
     }
-    -- Gitsigns
-    use 'lewis6991/gitsigns.nvim'
-    -- Nvim color highlight
-    use 'brenoprata10/nvim-highlight-colors'
-    -- Inden blankline
-    use 'lukas-reineke/indent-blankline.nvim'
-    -- TS-rainbow
-    use 'p00f/nvim-ts-rainbow'
-    -- Autotag
-    use 'windwp/nvim-ts-autotag'
-    -- Startify
-    use 'mhinz/vim-startify'
-    -- Vim bbye
-    use 'moll/vim-bbye'
-    -- Vim surrond
-    use 'tpope/vim-surround'
+    -- Trouble
+    use {
+        "folke/trouble.nvim",
+        requires = "nvim-tree/nvim-web-devicons",
+    }
 end)

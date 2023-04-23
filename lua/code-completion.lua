@@ -11,31 +11,31 @@ vim.opt.shortmess = vim.opt.shortmess + { c = true}
 local cmp = require('cmp')
 
 local lsp_symbols = {
-    Text = "   (Text) ",
-    Method = "   (Method)",
-    Function = "   (Function)",
-    Constructor = "   (Constructor)",
-    Field = " ﴲ  (Field)",
-    Variable = "[] (Variable)",
-    Class = "   (Class)",
-    Interface = " ﰮ  (Interface)",
-    Module = "   (Module)",
-    Property = " 襁 (Property)",
-    Unit = "   (Unit)",
-    Value = "   (Value)",
-    Enum = " 練 (Enum)",
-    Keyword = "   (Keyword)",
-    Snippet = "   (Snippet)",
-    Color = "   (Color)",
-    File = "   (File)",
-    Reference = "   (Reference)",
-    Folder = "   (Folder)",
-    EnumMember = "   (EnumMember)",
-    Constant = " ﲀ  (Constant)",
-    Struct = " ﳤ  (Struct)",
-    Event = "   (Event)",
-    Operator = "   (Operator)",
-    TypeParameter = "   (TypeParameter)",
+    Text = '   (Text) ',
+    Method = '   (Method)',
+    Function = '   (Function)',
+    Constructor = '   (Constructor)',
+    Field = ' ﴲ  (Field)',
+    Variable = '[] (Variable)',
+    Class = '   (Class)',
+    Interface = ' ﰮ  (Interface)',
+    Module = '   (Module)',
+    Property = ' 襁 (Property)',
+    Unit = '   (Unit)',
+    Value = '   (Value)',
+    Enum = ' 練 (Enum)',
+    Keyword = '   (Keyword)',
+    Snippet = '   (Snippet)',
+    Color = '   (Color)',
+    File = '   (File)',
+    Reference = '   (Reference)',
+    Folder = '   (Folder)',
+    EnumMember = '   (EnumMember)',
+    Constant = ' ﲀ  (Constant)',
+    Struct = ' ﳤ  (Struct)',
+    Event = '   (Event)',
+    Operator = '   (Operator)',
+    TypeParameter = '   (TypeParameter)',
 }
 
 cmp.setup({
@@ -75,7 +75,7 @@ cmp.setup({
 	},
     snippet = {
         expand = function(args)
-            vim.fn["vsnip#anonymous"](args.body)
+            vim.fn['vsnip#anonymous'](args.body)
         end,
     },
 
@@ -83,10 +83,10 @@ cmp.setup({
         format = function(entry, item)
             item.kind = lsp_symbols[item.kind]
             item.menu = ({
-                buffer = "[Buffer]",
-                nvim_lsp = "[LSP]",
-                luasnip = "[Snippet]",
-                neorg = "[Neorg]",
+                buffer = '[Buffer]',
+                nvim_lsp = '[LSP]',
+                luasnip = '[Snippet]',
+                neorg = '[Neorg]',
             })[entry.source.name]
 
             return item

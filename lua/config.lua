@@ -11,6 +11,7 @@ vim.cmd('set colorcolumn=80')
 
 -- Swap files
 vim.opt.swapfile = false
+vim.opt.scrolloff = 5
 
 -- Tab size
 local TAB_WIDTH = 4

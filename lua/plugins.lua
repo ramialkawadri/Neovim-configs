@@ -34,7 +34,7 @@ return require('packer').startup(function(use)
     use 'projekt0n/github-nvim-theme'
     -- Autopairs
     use 'windwp/nvim-autopairs'
-    -- comments
+    -- Comments
     use 'numToStr/Comment.nvim'
     -- File explorer tree
     use {

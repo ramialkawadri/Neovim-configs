@@ -6,6 +6,12 @@ vim.g.loaded_netrwPlugin = 1
 
 require('nvim-tree').setup {
     filters = {
-        custom = { '.git' }
+        custom = { '.git' },
+    },
+
+    renderer = {
+        indent_markers = {
+            enable = true
+        }
     }
 }

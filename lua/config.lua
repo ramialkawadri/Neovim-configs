@@ -1,4 +1,5 @@
 -- Required in multiple plugins
+vim.o.termguicolors = true
 vim.opt.termguicolors = true
 
 -- Lines configs

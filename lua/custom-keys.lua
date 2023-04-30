@@ -30,3 +30,7 @@ map('n', '<C-h>', ':lua require(\'nvim-tree.api\').node.open.horizontal() <CR>',
 -- Toggleterm
 map('n', '<C-t>', '<cmd>ToggleTerm<CR>', {})
 map('t', '<C-t>', '<cmd>ToggleTerm<CR>', {})
+
+-- Clear highlighting on escape in normal mode
+map('n', '<esc>', '<cmd>:noh<CR>')
+

@@ -20,3 +20,9 @@ local TAB_WIDTH = 4
 vim.opt.tabstop = TAB_WIDTH
 vim.opt.shiftwidth = TAB_WIDTH
 vim.opt.expandtab = true
+
+-- Autocomplete size
+vim.cmd('set pumwidth=50')
+
+-- Ignorecases by default
+vim.cmd('set ic');

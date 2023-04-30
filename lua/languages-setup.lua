@@ -1,6 +1,8 @@
 -- Documentation: https://github.com/neovim/nvim-lspconfig
 
-lspconfig = require('lspconfig')
+local lspconfig = require('lspconfig')
+
+--------------------------LSP--------------------------
 
 -- C & CPP
 lspconfig.clangd.setup {}
@@ -27,4 +29,7 @@ lspconfig.lua_ls.setup {}
 
 -- Bash
 lspconfig.bashls.setup {}
+
+-- Vim
+lspconfig.vimls.setup {}
 

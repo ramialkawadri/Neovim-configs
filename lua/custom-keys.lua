@@ -32,5 +32,5 @@ map('n', '<C-t>', '<cmd>ToggleTerm<CR>', {})
 map('t', '<C-t>', '<cmd>ToggleTerm<CR>', {})
 
 -- Clear highlighting on escape in normal mode
-map('n', '<esc>', '<cmd>:noh<CR>')
+map('n', '<esc>', '<cmd>:noh<CR>', {})
 

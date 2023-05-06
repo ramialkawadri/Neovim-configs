@@ -34,3 +34,11 @@ map('t', '<C-t>', '<cmd>ToggleTerm<CR>', {})
 -- Clear highlighting on escape in normal mode
 map('n', '<esc>', '<cmd>:noh<CR>', {})
 
+-- Move lines up and down
+map('n', '<A-j>', '<cmd>:m .+1<CR>==', {})
+map('n', '<A-k>', '<cmd>:m .-2<CR>==', {})
+map('i', '<A-j>', '<Esc><cmd>:m .+1<CR>==gi', {})
+map('i', '<A-k>', '<Esc><cmd>:m .-2<CR>==gi', {})
+map('v', '<A-j>', 'xp`[V`]', {})
+map('v', '<A-k>', 'xkP`[V`]', {})
+

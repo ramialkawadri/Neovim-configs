@@ -30,7 +30,8 @@ return require('packer').startup(function(use)
     use 'moll/vim-bbye'
     -- Vim surrond
     use 'tpope/vim-surround'
-    -- Github theme
+    -- Themes
+    use 'rafi/awesome-vim-colorschemes'
     use 'projekt0n/github-nvim-theme'
     -- Autopairs
     use 'windwp/nvim-autopairs'
